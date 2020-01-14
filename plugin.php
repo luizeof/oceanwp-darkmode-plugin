@@ -24,7 +24,10 @@ function oceanwp_get_dark_mode_color($color, $dark = "#152642")
 }
 
 add_action('wp_head', function () {
-    echo '<style>article h1, article h2, article h3,h4,h5,h6{color: ' . oceanwp_get_dark_mode_color('#7DFFF7', 30) . ' !important;}</style>';
+    echo '<style>';
+    echo 'article .entry-content p, article .entry-content li {color: #FFF};';
+    echo 'header h1, header h2, article h2, article h3,h4,h5,h6 {color: #7DFFF7 !important};';
+    echo '</style>';
 });
 
 add_filter('theme_mod_ocean_header_background', function ($value) {
