@@ -20,6 +20,7 @@ function oceanwp_darkmode_body_class( $classes ) {
     else :
         $classes[] = 'oceanwp-lightmode';
     endif;
+    $classes[] = 'hour_' . oceanwp_current_hour();
     return $classes;
 }
 
@@ -34,12 +35,16 @@ function oceanwp_get_dark_mode_color($color, $dark = "#152642")
 
 function oceanwp_is_darkmode_hour()
 {
-    $hour = date('H', current_time('timestamp', 0));
-    if (($hour >= 21) || ($hour <= 9)) :
+    if ((oceanwp_current_hour() >= 21) || (oceanwp_current_hour() <= 8)) :
         return true;
     else :
         return false;
     endif;
+}
+
+function oceanwp_current_hour()
+{
+    return date_i18n('H', current_time('timestamp', 0));
 }
 
 add_action('wp_head', function () {
