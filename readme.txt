@@ -36,6 +36,7 @@ Yes, from 21 PM to 8 AM.
 
 == Changelog ==
 
+1.0.0 - Initial Version
 
 == Upgrade Notice ==
 
