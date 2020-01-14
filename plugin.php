@@ -16,9 +16,9 @@
 add_filter( 'body_class','oceanwp_darkmode_body_class' );
 function oceanwp_darkmode_body_class( $classes ) {
     if ( oceanwp_is_darkmode_hour() ) :
-        $classes[] = 'lightmode';
+        $classes[] = 'oceanwp-darkmode';
     else :
-        $classes[] = 'darkmode';
+        $classes[] = 'oceanwp-lightmode';
     endif;
     return $classes;
 }
