@@ -13,13 +13,32 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  */
 
+add_filter( 'body_class','oceanwp_darkmode_body_class' );
+function oceanwp_darkmode_body_class( $classes ) {
+    if ( oceanwp_is_darkmode_hour() ) :
+        $classes[] = 'lightmode';
+    else :
+        $classes[] = 'darkmode';
+    endif;
+    return $classes;
+}
+
 function oceanwp_get_dark_mode_color($color, $dark = "#152642")
 {
-    $hour = date('H', current_time('timestamp', 0));
-    if (($hour >= 21) || ($hour <= 9)) :
+    if ( oceanwp_is_darkmode_hour() ) :
         return $dark;
     else :
         return $color;
+    endif;
+}
+
+function oceanwp_is_darkmode_hour()
+{
+    $hour = date('H', current_time('timestamp', 0));
+    if (($hour >= 21) || ($hour <= 9)) :
+        return true;
+    else :
+        return false;
     endif;
 }
 
