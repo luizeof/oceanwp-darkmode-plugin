@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Plugin Name:       OceanWP Dark Mode
- * Plugin URI:        https://luizeof.com.br/opensource/oceawp-darkmode/
- * Description:       Apply Dark Mode to OceanWP Theme
+ * Plugin Name:       Dark Mode for Ocean
+ * Plugin URI:        https://luizeof.com.br/opensource/darkmode-for-ocean/
+ * Description:       Apply Dark Mode to Ocean Theme
  * Version:           1.0.0
  * Requires at least: 5.2
  * Requires PHP:      7.2
@@ -13,9 +13,10 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  */
 
-add_filter( 'body_class','oceanwp_darkmode_body_class' );
-function oceanwp_darkmode_body_class( $classes ) {
-    if ( oceanwp_is_darkmode_hour() ) :
+add_filter('body_class', 'oceanwp_darkmode_body_class');
+function oceanwp_darkmode_body_class($classes)
+{
+    if (oceanwp_is_darkmode_hour()) :
         $classes[] = 'oceanwp-darkmode';
     else :
         $classes[] = 'oceanwp-lightmode';
@@ -26,7 +27,7 @@ function oceanwp_darkmode_body_class( $classes ) {
 
 function oceanwp_get_dark_mode_color($color, $dark = "#152642")
 {
-    if ( oceanwp_is_darkmode_hour() ) :
+    if (oceanwp_is_darkmode_hour()) :
         return $dark;
     else :
         return $color;
