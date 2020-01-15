@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name:       Dark Mode for OceanWP
- * Plugin URI:        https://luizeof.com.br/opensource/darkmode-for-ocean/
+ * Plugin URI:        https://luizeof.com.br/opensource/plugin-darkmode-ocean/
  * Description:       Apply Dark Mode to OceanWP Theme
  * Version:           1.0.1
  * Requires at least: 5.2
