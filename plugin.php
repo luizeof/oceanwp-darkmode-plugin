@@ -1,13 +1,13 @@
 <?php
 
 /**
- * Plugin Name:       Dark Mode for Ocean
+ * Plugin Name:       Dark Mode for OceanWP
  * Plugin URI:        https://luizeof.com.br/opensource/darkmode-for-ocean/
- * Description:       Apply Dark Mode to Ocean Theme
- * Version:           1.0.0
+ * Description:       Apply Dark Mode to OceanWP Theme
+ * Version:           1.0.1
  * Requires at least: 5.2
  * Requires PHP:      7.2
- * Author:            luizeof
+ * Author:            luizeduardo
  * Author URI:        https://www.luizeof.com.br
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
