@@ -22,4 +22,8 @@ Yes, from 21 PM to 8 AM.
 
 ## Changelog
 
+1.0.2 - Fixes
+
+1.0.1 - Linting
+
 1.0.0 - Initial Version
